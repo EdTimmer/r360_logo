@@ -49,6 +49,6 @@ export default class Box {
 
   update() {    
     this.material.uniforms.u_Time.value = this.experience.time.getElapsedTime().toFixed(2);
-    this.mesh.rotation.z -= 0.001;
+    // this.mesh.rotation.z -= 0.001;
   }
 }

@@ -4,6 +4,11 @@ import Environment from "./Environment"
 import Box from "./Box"
 import Sphere from "./Sphere"
 import CenterGroup from "./CenterGroup/CenterGroup"
+import TextOne from "./TextOne"
+import TextTwo from "./TextTwo"
+import TextThree from "./TextThree"
+import TextFour from "./TextFour"
+import Particles from "./Particles"
 
 export default class World {
   constructor() {
@@ -23,7 +28,12 @@ export default class World {
       // Setup
       this.box = new Box();
       this.sphere = new Sphere();
-      this.CenterGroup = new CenterGroup();
+      // this.CenterGroup = new CenterGroup();
+      this.textOne = new TextOne();
+      this.textTwo = new TextTwo();
+      this.textThree = new TextThree();
+      this.textFour = new TextFour();
+      // this.particles = new Particles();
 
       this.environment = new Environment()
     })
@@ -39,8 +49,20 @@ export default class World {
     if (this.sphere) {
       this.sphere.update()
     }
-    if (this.CenterGroup) {
-      this.CenterGroup.update()
+    if (this.textOne) {
+      this.textOne.update()
     }
+    if (this.textTwo) {
+      this.textTwo.update()
+    }
+    if (this.textThree) {
+      this.textThree.update()
+    }
+    if (this.textFour) {
+      this.textFour.update()
+    }
+    // if (this.CenterGroup) {
+    //   this.CenterGroup.update()
+    // }
   }
 }
